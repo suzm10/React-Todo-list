@@ -1,9 +1,12 @@
 import Header from "./component/header"
 import './App.css';
+import AgendaList from "./component/AgendaList";
 
 function App() {
   return (
-    <div className="App">
+    <div className="Agenda-App">
+      <AgendaList />
+
     <Header/>
     </div>
   );
