@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, CardContent, Container, Typography, IconButton } from '@material-ui/core'
-import { Check, Delete } from '@material-ui/icons'
+import { Check, Delete, Edit } from '@material-ui/icons'
 
 const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo }) => {
     const markComplete = () => checkTodo(id)
@@ -19,6 +19,9 @@ const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo }) => {
                                 <Check style={{ color: "green" }}/>
                             </IconButton>
                             {title}
+                            <IconButton style={{ float: "right" }}>
+                                <Edit style={{ color: "#dabe10" }}/>
+                            </IconButton>
                             <IconButton style={{ float: "right" }} onClick={delTodo}>
                                 <Delete style={{ color: "red" }}/>
                             </IconButton>

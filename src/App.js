@@ -16,6 +16,15 @@ function App() {
     }))
   }
 
+/*   
+  const editTodo = (id) => {
+    setTodos(todos.map(todo => {
+      if(todo.id === id)
+        todo.text
+    }))
+  } 
+*/
+
   const deleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id))
   }
