@@ -10,7 +10,7 @@ const TodoForm = () => {
             <form>
                 <FormControl fullWidth={true}>
                     <TextField label="I will do this" required={true} />
-                    <Button variant="contained" color="primary" style={{ marginTop: 5}}>Add</Button>
+                    <Button variant="contained" color="primary" style={{ marginTop: 5}} type="submit">Add</Button>
                 </FormControl>
             </form>
         </Container>
