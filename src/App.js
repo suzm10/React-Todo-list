@@ -4,7 +4,10 @@ import { Container, CssBaseline } from '@material-ui/core'
 import Header from './components/Header'
 import TodoList from './components/TodoList'
 
+
+  
 function App() {
+
   const [todos, setTodos] = useState([
     {
       val: 'todo 1',
@@ -23,19 +26,24 @@ function App() {
       'date': '16th june'
     }
   ])
-  
-  function App() {
-    return (
-      <>
-        <CssBaseline/>
-        <Container>
-          <Header/>
-          <TodoList todos={todos}/>
-        </Container>
-      </>
-    );
+
+  const handleFabClick = () => {
+    console.log('click')
   }
+  
+  return (
+    <>
+      <CssBaseline/>
+      <Container>
+        <Header
+          handleFabClick={handleFabClick}
+        />
+        <TodoList todos={todos}/>
+      </Container>
+    </>
+  );
 }
+
 
 
 export default App;

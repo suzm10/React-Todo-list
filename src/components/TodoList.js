@@ -1,14 +1,30 @@
 import React from 'react'
+import { Chip, Grid, Paper, Typography } from '@material-ui/core'
 
 function TodoList(props) {
     return (
-        props.todos.map((todo) => {
-            return (
-                <div>
-                    todo
-                </div>
-            )
-        })
+        <Grid container direction="column" spacing={2}  style={{marginTop: '1.2rem'}}>
+            {
+                props.todos.map((todo) => {
+                    return (
+                        <Grid item>
+                            <Paper style={{padding: '0.8rem'}} elevation={3}>
+                                <Grid container alignItem="center" justify="space-between">
+                                    <Grid item>
+                                        <Typography variant="h6">
+                                            {todo.val}
+                                        </Typography>
+                                    </Grid>
+                                    <Grid>
+                                        <Chip color="primary" label={todo.date} />
+                                    </Grid>
+                                </Grid>
+                            </Paper>
+                        </Grid>
+                    )
+                })
+            }
+        </Grid>
     )
 }
 
