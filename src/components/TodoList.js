@@ -16,7 +16,8 @@ function TodoList(props) {
                                         </Typography>
                                     </Grid>
                                     <Grid>
-                                        <Chip color="primary" label={todo.date} />
+                                        <Chip color="primary" label={todo.date} size="small" variant="outlined"/>
+                                        <Chip color="primary" label={todo.time} size="small" variant="outlined"/>
                                     </Grid>
                                 </Grid>
                             </Paper>
