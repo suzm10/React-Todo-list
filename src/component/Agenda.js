@@ -4,18 +4,12 @@ import AgendaList from './AgendaList'
 import EditIcon from '@material-ui/icons/Edit';
 import CloseIcon from '@material-ui/icons/Close';
 
-function Agenda({agendas, completeAgenda}) {
+function Agenda({agendas, completeAgenda, removeAgenda}) {
     const [editAgendas, setAgendas] = useState({
         id: null,
         value: ""
     })
-
-    /*
-    <div className ="icons">
-                <CloseIcon/>
-                <EditIcon/>
-            </div>
-    */
+    
     return agendas.map((agenda, index) => (
         <div className={agenda.isComplete ? 'agenda-row complete' : 'agenda-row'}
         key={index}
@@ -23,9 +17,16 @@ function Agenda({agendas, completeAgenda}) {
             <div key={agenda.id} onClick={() => completeAgenda(agenda.id)}>
                 {agenda.text}
             </div>
+            
             <div className='icons'>
-                <EditIcon/>
-                <CloseIcon/>
+                <EditIcon
+                onClick={() => setAgendas({id: agenda.id, value: agenda.text})}
+                className='edit-icon'
+                />
+                <CloseIcon
+                onClick ={() =>removeAgenda(agenda.id)}
+                className='delete-icon'
+                />
             </div>
         </div>
     ))

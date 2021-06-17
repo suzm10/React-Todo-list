@@ -15,6 +15,23 @@ function AgendaList() {
         setupAgendas(newAgendas)
     }
 
+    /*This code Below */
+    const updateAgenda = (agendaId, newValue) => {
+        if(!newValue.text || /^\s*$/.test(newValue.text)){
+            return
+        }
+
+        setupAgendas(prev =>(item => (item.id === agendaId ? newValue : item)));
+    }
+
+    /*This code Below */
+    const removeAgenda = id => {
+        const removeArr = [...agendas].filter(todo => todo.id !== id);
+
+        setupAgendas(removeArr);
+    }
+    
+    /*This code Below */
     const completeAgenda = id =>{
         let updatedAgendas = agendas.map(agenda => {
             if (agenda.id === id) {
@@ -33,6 +50,8 @@ function AgendaList() {
             <Agenda 
             agendas={agendas}
             completeAgenda={completeAgenda}
+            removeAgenda={removeAgenda}
+            updateAgenda={updateAgenda}
             />
         </div>
     )
