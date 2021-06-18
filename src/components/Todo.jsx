@@ -1,29 +1,35 @@
 import React from 'react'
-import { Card, CardContent, Container, Typography, IconButton } from '@material-ui/core'
+import { useState } from 'react'
+import { Card, CardContent, Container, Typography, IconButton, Chip, Grid } from '@material-ui/core'
 import { Check, Delete, Edit } from '@material-ui/icons'
 
-const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo }) => {
+const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo, editTodo, date }) => {
+    const currentDate = date
     const markComplete = () => checkTodo(id)
     const delTodo = () => deleteTodo(id)
+    const editing = () => editTodo(id)
     const todoStyle = isCompleted 
         ? { textDecoration:"line-through" } 
         : { textDecoration: "none" };
+    const [edit, setEdit] = useState(false);
     return (
+        // {edit ? <div/> : }
         <div>
             <Container>
-                <Card variant="outlined" style={{ marginTop: 35, background: "lightgray" }}>
+                <Card variant="outlined" style={{ marginTop: 35, background: "#ECECEC" }}>
                     <CardContent>
                     {/* Check Icon */}
-                        <Typography variant="h5" component="h2" style={todoStyle}>
+                        <Typography variant="h5" component="h2" style={todoStyle} spacing={5} style={{ color: "#002984" }}>
                             <IconButton onClick={markComplete}>
-                                <Check style={{ color: "green" }}/>
+                                <Check style={{ color: "#28CC2D" }}/>
                             </IconButton>
                             {title}
+                            <Chip label={date} style={{ color: "#3581D8" }}/>
                             <IconButton style={{ float: "right" }}>
-                                <Edit style={{ color: "#dabe10" }}/>
+                                <Edit style={{ color: "#FFE135" }} onClick={editTodo}/>
                             </IconButton>
                             <IconButton style={{ float: "right" }} onClick={delTodo}>
-                                <Delete style={{ color: "red" }}/>
+                                <Delete style={{ color: "#D82E3F" }}/>
                             </IconButton>
                         </Typography>
                     </CardContent>

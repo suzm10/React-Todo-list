@@ -12,10 +12,10 @@ const TodoForm = ({ addTodo }) => {
 
     return (
         <Container maxWidth="sm">
-            <Typography variant="h3" align="center">Todo List</Typography>
+            <Typography variant="h3" align="center" style={{ color: "#0C0B13" }}>Todo List</Typography>
             <form onSubmit={handleSubmit}>
                 <FormControl fullWidth={true}>
-                    <TextField label="I will do this" required={true} 
+                    <TextField required={true} 
                     value={text} onChange={(e) => setText(e.target.value)} data-testid="new-item-input"/>
                     <Button variant="contained" color="primary" style={{ marginTop: 5}} type="submit" data-testid="new-item-button">Add</Button>
                 </FormControl>
