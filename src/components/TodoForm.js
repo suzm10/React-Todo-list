@@ -3,17 +3,17 @@ import { FormControl, Container, TextField, Button } from '@material-ui/core'
 import { Typography } from '@material-ui/core';
 
 const TodoForm = ({ addTodo }) => {
-    let texts = [];
-
-    const [text, setText] = useState("");
+    const [text, setText] = useState('');
+    const [texts, setTexts] = useState([]);
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(!texts.includes(text)) {
+        if (!texts.includes(text)) {
             addTodo(text);
-            setText("");
-            texts.push(text);
+            setTexts(texts.concat(text));
+            setText('');
+            text='';
         }
-    };
+    }
 
     return (
         <Container maxWidth="sm">
