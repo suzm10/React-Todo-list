@@ -54,13 +54,13 @@ function App() {
   }
 
   const addTodo = (text) => {
-    const newTodo = {
-      id: v4(),
-      title: text,
-      isCompleted: false,
-      date: currentDate,
-    }
-    setTodos([...todos, newTodo])
+      const newTodo = {
+        id: v4(),
+        title: text,
+        isCompleted: false,
+        date: currentDate,
+      }
+      setTodos([...todos, newTodo])
   }
 
   return (
