@@ -19,7 +19,7 @@ const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo, editTodo, date })
                 <Card variant="outlined" style={{ marginTop: 35, background: "#ECECEC" }}>
                     <CardContent>
                     {/* Check Icon */}
-                        <Typography variant="h5" component="h2" style={todoStyle} spacing={5} style={{ color: "#002984" }}>
+                        <Typography variant="h5" component="h2" style={todoStyle} spacing={5}>
                             <IconButton onClick={markComplete}>
                                 <Check style={{ color: "#28CC2D" }}/>
                             </IconButton>

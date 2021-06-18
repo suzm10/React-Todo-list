@@ -11,7 +11,9 @@ const TodoForm = ({ addTodo }) => {
             addTodo(text);
             setTexts(texts.concat(text));
             setText('');
-            text='';
+        }
+        else {
+            setText('');
         }
     }
 
