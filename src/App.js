@@ -20,7 +20,7 @@ function App() {
     var sec = new Date().getSeconds();
     setCurrentDate(
       month + '/' + date + '/' + year 
-      + ' ' + hours + ':' + min + ':' + sec
+      + ' ' + hours + ':' + min
     );
   }, []);
 
