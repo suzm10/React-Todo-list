@@ -27,8 +27,8 @@ const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo, date }) => {
                             <Typography align='center' variant="h5" component="h2" style={todoStyle} spacing={5}>
                             <EditableLabel text = {title} inputWidth='200px' 
                                 inputHeight='25px'></EditableLabel>
-                            <Chip label={date} style={{ color: "#3581D8" }}/>
                             </Typography>
+                            <Chip label={date} style={{ color: "#3581D8" }}/>
                             {/* <IconButton style={{ float: "right" }}>
                                 <Edit style={{ color: "#FFE135" }} onClick={editTodo}/>
                             </IconButton> */}
