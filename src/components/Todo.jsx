@@ -1,19 +1,19 @@
 import React from 'react'
-import { useState } from 'react'
-import { Card, CardContent, Container, Typography, IconButton, Chip, Grid } from '@material-ui/core'
-import { Check, Delete, Edit } from '@material-ui/icons'
+/* import { useState } from 'react' */
+import { Card, CardContent, Container, Typography, IconButton, Chip } from '@material-ui/core'
+import { Check, Delete } from '@material-ui/icons'
 import EditableLabel from 'react-inline-editing'
 
 
-const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo, editTodo, date }) => {
-    const currentDate = date
+const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo, date }) => {
+    /* const currentDate = date */
     const markComplete = () => checkTodo(id)
     const delTodo = () => deleteTodo(id)
-    const editing = () => editTodo(id)
+    /* const editing = () => editTodo(id) */
     const todoStyle = isCompleted 
         ? { textDecoration:"line-through" } 
         : { textDecoration: "none" };
-    const [edit, setEdit] = useState(false);
+    /* const [edit, setEdit] = useState(false); */
     return (
         // {edit ? <div/> : }
         <div>

@@ -6,8 +6,8 @@ import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([])
-  const [itemEditing, setItemEditing] = useState(null);
-  var [editingText, setEditingText] = useState("");
+  /* const [itemEditing, setItemEditing] = useState(null);
+  var [editingText, setEditingText] = useState(""); */
   
   const [currentDate, setCurrentDate] = useState('');
 
@@ -17,7 +17,7 @@ function App() {
     var year = new Date().getFullYear();
     var hours = new Date().getHours();
     var min = new Date().getMinutes();
-    var sec = new Date().getSeconds();
+    /* var sec = new Date().getSeconds(); */
     setCurrentDate(
       month + '/' + date + '/' + year 
       + ' ' + hours + ':' + min
@@ -36,7 +36,7 @@ function App() {
   }
 
   
-  const editTodo = (id) => {
+  /* const editTodo = (id) => {
     const updatedTodos = [...todos].map((todo) => {
       if (todo.id === id && editingText !== "") {
         todo.text = editingText;
@@ -47,7 +47,7 @@ function App() {
     setItemEditing(null);
     setEditingText("");
   } 
-
+ */
 
   const deleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id))
