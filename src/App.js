@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TodoForm from "./components/TodoForm"
 import TodoList from "./components/TodoList"
 import { v4 } from 'uuid'
@@ -9,25 +9,8 @@ function App() {
   /* const [itemEditing, setItemEditing] = useState(null);
   var [editingText, setEditingText] = useState(""); */
   
-  const [currentDate, setCurrentDate] = useState('');
+  /* const [currentDate, setCurrentDate] = useState(''); */
 
-  useEffect(() => {
-
-
-    var date = new Date().getDate();
-    var month = new Date().getMonth() + 1;
-    var year = new Date().getFullYear();
-    var hours = new Date().getHours();
-    var min = new Date().getMinutes();
-  
-    /* var sec = new Date().getSeconds(); */
-    
-    setCurrentDate(
-      month + '/' + date + '/' + year 
-      + ' ' + hours + ':' + min
-    );
-      
-  }, []);
 
   function currentTime(){
     var date = new Date().getDate();
