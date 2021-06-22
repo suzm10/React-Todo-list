@@ -12,17 +12,40 @@ function App() {
   const [currentDate, setCurrentDate] = useState('');
 
   useEffect(() => {
+
+
     var date = new Date().getDate();
     var month = new Date().getMonth() + 1;
     var year = new Date().getFullYear();
     var hours = new Date().getHours();
     var min = new Date().getMinutes();
+  
     /* var sec = new Date().getSeconds(); */
+    
     setCurrentDate(
       month + '/' + date + '/' + year 
       + ' ' + hours + ':' + min
     );
+      
   }, []);
+
+  function currentTime(){
+    var date = new Date().getDate();
+    var month = new Date().getMonth() + 1;
+    var year = new Date().getFullYear();
+    var hours = new Date().getHours();
+    var min = new Date().getMinutes();
+    var sec = new Date().getSeconds();
+
+    return month + '/' + date + '/' + year 
+    + ' ' + hours + ':' + min + ':' + sec;
+
+
+
+  }
+  
+
+
 
 
   const checkTodo = (id) => {
@@ -58,7 +81,7 @@ function App() {
         id: v4(),
         title: text,
         isCompleted: false,
-        date: currentDate,
+        date: currentTime(),
       }
       setTodos([...todos, newTodo])
   }
