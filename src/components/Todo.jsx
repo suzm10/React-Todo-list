@@ -24,11 +24,12 @@ const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo, editTodo, date })
                             <IconButton onClick={markComplete}>
                                 <Check style={{ color: "#28CC2D" }}/>
                             </IconButton>
-                            <EditableLabel text = {title}></EditableLabel>
+                            <EditableLabel text = {title} inputWidth='200px' 
+                                inputHeight='25px'></EditableLabel>
                             <Chip label={date} style={{ color: "#3581D8" }}/>
-                            <IconButton style={{ float: "right" }}>
+                            {/* <IconButton style={{ float: "right" }}>
                                 <Edit style={{ color: "#FFE135" }} onClick={editTodo}/>
-                            </IconButton>
+                            </IconButton> */}
                             <IconButton style={{ float: "right" }} onClick={delTodo}>
                                 <Delete style={{ color: "#D82E3F" }}/>
                             </IconButton>
