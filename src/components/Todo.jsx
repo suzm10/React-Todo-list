@@ -20,7 +20,6 @@ const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo, date }) => {
             <Container>
                 <Card variant="outlined" style={{ marginTop: 35, background: "#ECECEC" }}>
                     <CardContent>
-                        <Typography variant="h5" component="h2" style={todoStyle} spacing={5}>
                             <IconButton onClick={markComplete}>
                                 <Check style={{ color: "#28CC2D" }}/>
                             </IconButton>
@@ -35,7 +34,6 @@ const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo, date }) => {
                             <IconButton style={{ float: "right" }} onClick={delTodo}>
                                 <Delete style={{ color: "#D82E3F" }}/>
                             </IconButton>
-                        </Typography>
                     </CardContent>
                 </Card>
             </Container>
