@@ -19,21 +19,22 @@ const Todo = ({ title, checkTodo, id, isCompleted, deleteTodo, date }) => {
         <div>
             <Container>
                 <Card variant="outlined" style={{ marginTop: 35, background: "#ECECEC" }}>
-                    <CardContent>
-                            <IconButton onClick={markComplete}>
-                                <Check style={{ color: "#28CC2D" }}/>
-                            </IconButton>
-                            <Typography align='center' variant="h5" component="h2" style={todoStyle} spacing={5}>
+                    <CardContent>                            
+                            <Typography float="inline-center" variant="h5" component="h2" style={todoStyle} spacing={5}>
                             <EditableLabel text = {title} inputWidth='200px' 
                                 inputHeight='25px'></EditableLabel>
                             </Typography>
-                            <Chip label={date} style={{ color: "#3581D8" }}/>
+                            
                             {/* <IconButton style={{ float: "right" }}>
                                 <Edit style={{ color: "#FFE135" }} onClick={editTodo}/>
                             </IconButton> */}
                             <IconButton style={{ float: "right" }} onClick={delTodo}>
                                 <Delete style={{ color: "#D82E3F" }}/>
                             </IconButton>
+                            <IconButton onClick={markComplete} style={{float: "right"}}>
+                                <Check style={{ color: "#28CC2D" }}/>
+                            </IconButton>
+                            <Chip label={date} style={{ float: "left", color: "#3581D8" }}/>
                     </CardContent>
                 </Card>
             </Container>
