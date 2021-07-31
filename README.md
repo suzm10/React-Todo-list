@@ -28,3 +28,6 @@ When testing web components, developers often use ids to uniquely define element
 
 
 Note: Material UI components (and other libraries) render as HTML components under the hood, so using Material UI's TextField would still render in the DOM as an Input element and pass the tests for this lab.
+
+## Deployment
+We deployed our [app](https://json-user-search.herokuapp.com/) with heroku.
